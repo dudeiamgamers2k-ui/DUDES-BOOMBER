@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUDES PANEL</title>
+    <title>DUDES PANEL - Unlimited Bomber</title>
     <style>
-        body { margin: 0; padding: 0; background: #000; color: #0f0; font-family: 'Courier New', Courier, monospace; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; }
-        .container { border: 2px solid #0f0; padding: 50px; border-radius: 15px; box-shadow: 0 0 20px #0f0; }
-        h1 { font-size: 3rem; text-shadow: 0 0 10px #0f0; margin-bottom: 20px; }
-        p { font-size: 1.2rem; letter-spacing: 2px; }
-        .btn { display: inline-block; margin-top: 20px; padding: 10px 20px; color: #000; background: #0f0; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        body { background-color: #000; color: #0f0; font-family: 'Courier New', monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .bomber-box { border: 1px solid #0f0; padding: 30px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 15px #0f0; }
+        h2 { color: #0f0; margin-bottom: 20px; }
+        input { width: 90%; padding: 10px; margin: 10px 0; background: #111; border: 1px solid #333; color: #0f0; text-align: center; }
+        button { background: #0f0; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px; }
+        .footer { margin-top: 20px; font-size: 10px; color: #555; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>DUDES PANEL</h1>
-        <p>SYSTEM ONLINE...</p>
-        <p>Welcome to the Official Dudes Bomber Page</p>
-        <a href="#" class="btn">GET STARTED</a>
+    <div class="bomber-box">
+        <h2>Unlimited Bomber</h2>
+        <p style="font-size: 12px;">Enter Number:</p>
+        <input type="text" id="phone" placeholder="e.g. 017XXXXXXXX">
+        <p style="font-size: 12px;">Amount:</p>
+        <input type="number" id="amount" placeholder="Amount">
+        <button onclick="startBomber()">Start</button>
+        <div class="footer">© Developed by Dudes</div>
     </div>
+
+    <script>
+        function startBomber() {
+            let num = document.getElementById('phone').value;
+            if(num == "") {
+                alert("Please enter a number!");
+            } else {
+                alert("Bomber Started on: " + num + "\n(Note: API connection required for actual bombing)");
+            }
+        }
+    </script>
 </body>
 </html>
